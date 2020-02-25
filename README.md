@@ -1,3 +1,4 @@
+![image](gokopy_logo.png)
 Gokopy is a lightweight backup files software that runs as a service level or on-demand request.
 
 You can backup the entire directory, folder or even a single file recursively

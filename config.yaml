@@ -1,0 +1,52 @@
+app_name: gokopy
+author: ITRepablik.com
+
+default:
+  copy_mod_files_num_days: -7
+
+logging:
+  log_copied_file: true
+  max_age_in_days: 0
+  max_log_file_size_in_mb: 100
+
+ignore:
+  file_type_or_folder_name: .db, folder_name, setup.exe
+
+backups:
+  copydir_daily:
+    interval_options: [days, monday, tuesday, wednesday, thursday, friday, saturday, sunday]
+    sample_backup_items:
+      - src=C:\a, dst=C:\c, run_every=1, interval=days, run_at=11:45, retention_days=0;
+      - src=C:\a, dst=C:\cc, run_every=1, interval=monday, run_at=11:30, retention_days=-30;
+      - src=C:\a, dst=C:\bbb, run_every=1, interval=days, run_at=10:31, retention_days=-90;
+
+    backup_items:
+      - 
+
+  copydir_frequently:
+    interval_options: [seconds, minutes, hours]
+    sample_backup_items:
+      - src=C:\a, dst=C:\b, run_every=5, interval=seconds, retention_days=0;
+      - src=C:\a, dst=C:\bb, run_every=30, interval=minutes, retention_days=-30;
+      - src=C:\a, dst=C:\bbb, run_every=2, interval=hours, retention_days=-90;
+
+    backup_items:
+      - src=C:\a, dst=C:\b, run_every=15, interval=seconds, retention_days=-1;
+
+  copymd_daily:
+    interval_options: [days, monday, tuesday, wednesday, thursday, friday, saturday, sunday]
+    sample_backup_items:
+      - src=C:\a, dst=C:\c, run_every=1, interval=days, run_at=11:45, modified_days=-1;
+      - src=C:\a, dst=C:\cc, run_every=1, interval=monday, run_at=11:30, modified_days=-7;
+
+    backup_items:
+      - 
+  
+  copymd_frequently:
+    interval_options: [seconds, minutes, hours]
+    sample_backup_items:
+      - src=C:\a, dst=C:\b, run_every=15, interval=seconds, modified_days=-1;
+      - src=C:\a, dst=C:\bb, run_every=30, interval=minutes, modified_days=-7;
+
+    backup_items:
+      - 

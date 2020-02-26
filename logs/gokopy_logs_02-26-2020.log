@@ -1,0 +1,50 @@
+{"level":"info","ts":1582706548.745033,"msg":"Start compressing the directory or a folder:","src":"C:\\a","dst":"C:\\b","log_time":"Feb-26-2020 04:42:28 PM"}
+{"level":"info","ts":1582706548.7910156,"msg":"Done compressing the directory or a folder:","dst":"C:\\b\\a.tar.gz","log_time":"Feb-26-2020 04:42:28 PM"}
+{"level":"info","ts":1582706604.8298542,"msg":"Start decompressing the folder or a directory:","src":"C:\\b\\a.tar.gz","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8338509,"msg":"extracting to: ","dst":"C:\\b\\a\\Local Disk (C) - Shortcut.lnk","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8408468,"msg":"extracting to: ","dst":"C:\\b\\a\\a.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8428457,"msg":"extracting to: ","dst":"C:\\b\\a\\aaa\\a1.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8438463,"msg":"extracting to: ","dst":"C:\\b\\a\\b.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8458443,"msg":"extracting to: ","dst":"C:\\b\\a\\bbb\\b1.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8478425,"msg":"extracting to: ","dst":"C:\\b\\a\\bbb\\sb 1\\sb 2\\sb22.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.848843,"msg":"extracting to: ","dst":"C:\\b\\a\\bbb\\sb 1\\sb11.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.850841,"msg":"extracting to: ","dst":"C:\\b\\a\\c.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.85284,"msg":"extracting to: ","dst":"C:\\b\\a\\ccc\\c1.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8538396,"msg":"extracting to: ","dst":"C:\\b\\a\\file.txt","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.8548388,"msg":"extracting to: ","dst":"C:\\b\\a\\mediainfo.xml","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.9058092,"msg":"extracting to: ","dst":"C:\\b\\a\\setup.exe","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.9078085,"msg":"extracting to: ","dst":"C:\\b\\a\\setup.exe.config","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.911806,"msg":"extracting to: ","dst":"C:\\b\\a\\sqlsetupbootstrapper.dll","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.9158103,"msg":"extracting to: ","dst":"C:\\b\\a\\sqmapi.dll","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.918802,"msg":"extracting to: ","dst":"C:\\b\\a\\uninstall.exe","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706604.9208016,"msg":"extracting to: ","dst":"C:\\b\\a\\uninstall.sh","log_time":"Feb-26-2020 04:43:24 PM"}
+{"level":"info","ts":1582706605.0857072,"msg":"Done decompressing the folder or a directory:","src":"C:\\b\\a.tar.gz","log_time":"Feb-26-2020 04:43:25 PM"}
+{"level":"error","ts":1582706645.305556,"msg":"Start compressing the file:","src":"C:\\a\\a.txt","dst":"C:\\b","log_time":"Feb-26-2020 04:44:05 PM"}
+{"level":"info","ts":1582706645.6723442,"msg":"Done compressing the file:","src":"C:\\a\\a.txt","dst":"C:\\b\\a.zip","log_time":"Feb-26-2020 04:44:05 PM"}
+{"level":"error","ts":1582706674.3151433,"msg":"Start decompressing the file:","src":"C:\\b\\a.zip","log_time":"Feb-26-2020 04:44:34 PM"}
+{"level":"info","ts":1582706674.3201423,"msg":"extracting to: ","dst":"C:\\b\\a\\a.txt","log_time":"Feb-26-2020 04:44:34 PM"}
+{"level":"error","ts":1582706674.3231394,"msg":"Done decompressing the file:","src":"C:\\b\\a.zip","log_time":"Feb-26-2020 04:44:34 PM"}
+{"level":"info","ts":1582706706.820446,"msg":"Starts copying the entire directory or a folder: ","src":"C:\\a","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.832439,"msg":"copied_file","file":"Local Disk (C) - Shortcut.lnk","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8394353,"msg":"copied_file","file":"a.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.84743,"msg":"copied_file","file":"a1.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.84743,"msg":"copied_folder","name":"aaa","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8544257,"msg":"copied_file","file":"b.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8614354,"msg":"copied_file","file":"b1.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8704364,"msg":"copied_file","file":"sb22.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8704364,"msg":"copied_folder","name":"sb 2","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8774123,"msg":"copied_file","file":"sb11.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8774123,"msg":"copied_folder","name":"sb 1","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8784125,"msg":"copied_folder","name":"bbb","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8854234,"msg":"copied_file","file":"c.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8934045,"msg":"copied_file","file":"c1.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.8934045,"msg":"copied_folder","name":"ccc","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.9004002,"msg":"copied_file","file":"file.txt","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.9083958,"msg":"copied_file","file":"mediainfo.xml","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.9353793,"msg":"copied_file","file":"sqlsetupbootstrapper.dll","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706706.9563673,"msg":"copied_file","file":"sqmapi.dll","log_time":"Feb-26-2020 04:45:06 PM"}
+{"level":"info","ts":1582706707.410108,"msg":"copied_file","file":"uninstall.exe","log_time":"Feb-26-2020 04:45:07 PM"}
+{"level":"info","ts":1582706707.4201086,"msg":"copied_file","file":"uninstall.sh","log_time":"Feb-26-2020 04:45:07 PM"}
+{"level":"info","ts":1582706707.4210994,"msg":"Successfully copied the entire directory or a folder: ","src":"C:\\a","dst":"C:\\b","folder_copied":5,"files_copied":15,"log_time":"Feb-26-2020 04:45:07 PM"}
+{"level":"info","ts":1582706738.3369322,"msg":"Starts copying the single file:","src":"C:\\a\\a.txt","dst":"C:\\b","log_time":"Feb-26-2020 04:45:38 PM"}
+{"level":"info","ts":1582706738.3449268,"msg":"Successfully copied the file:","src":"C:\\a\\a.txt","dst":"C:\\b\\a.txt","log_time":"Feb-26-2020 04:45:38 PM"}

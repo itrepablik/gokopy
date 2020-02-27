@@ -1,0 +1,13 @@
+language: go
+
+go:
+  - master
+
+before_install:
+  - go get github.com/spf13/cobra
+  - go get github.com/spf13/viper
+  - go get go.uber.org/zap
+  - go get github.com/mitchellh/go-homedir
+
+script:
+  - make test

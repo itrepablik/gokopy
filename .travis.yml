@@ -24,7 +24,6 @@ before_install:
 
 before_script:
   - make build
-  - make build-remote-service
 
 script:
   - make test-verbose

@@ -1,4 +1,4 @@
-module gokopy
+module github.com/itrepablik/gokopy
 
 go 1.13
 

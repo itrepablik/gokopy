@@ -23,7 +23,7 @@ before_install:
   - go get github.com/mitchellh/go-homedir
 
 before_script:
-  - make build
+  - 
 
 script:
   - make test-verbose

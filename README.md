@@ -14,3 +14,8 @@ Gokopy is a `freemium` software developed by [ITRepablik](https://itrepablik.com
 
 Ensure that the `config.yaml` file has been properly configured for each of your automated backup items.
 This will save tons of your valuable time.
+
+# Premium Features
+This versions of open-source gokopy has a fully functional and basic backup files operation in Go, but, in our premium versions of gokopy, it has an automated backup files procedures that currently support the Windows OS in which it runs as a Windows Service that even when your local machine restarted unexpectedly, it will continue to back up your files as it runs automatically.
+
+You can get 1 premium license key for this full versions of gokopy, please get your free [ITR account](https://itrepalik.com/signup) here and to download the gokopy premium backup files software here.

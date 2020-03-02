@@ -17,10 +17,11 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"path/filepath"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 )
@@ -39,22 +40,23 @@ Example of a valid directory path in Windows:
 "C:\source_folder" "D:\backup_destination"
 
 Or using the network directories, example:
-"\\hostname_or_ip\source_folder" "\\hostname_or_ip\backup_destination"`,
+"\\hostname_or_ip\source_folder" "\\hostname_or_ip\backup_destination"
+
+Or in Linux:
+"/root/src" "/root/dst"`,
 	Args: cobra.MinimumNArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
-		var filesCopied, foldersCopied int = 0, 0 // Reset this variables
-
 		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change
 		// depends on the user's OS using the filepath.FromSlash organic Go's library.
 		src := filepath.FromSlash(args[0])
-		dest := filepath.FromSlash(args[1])
+		dst := filepath.FromSlash(args[1])
 
 		msg := `Starts copying the entire directory or a folder: `
 		fmt.Println(msg, src)
 		Sugar.Infow(msg, "src", src, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 
 		// Starts copying the entire directory or a folder.
-		filesCopied, foldersCopied, err := kopy.CopyDir(src, dest, IsLogCopiedFile)
+		filesCopied, foldersCopied, err := kopy.CopyDir(src, dst, IsLogCopiedFile, IgnoreFT, Sugar)
 		if err != nil {
 			fmt.Println(err)
 			Sugar.Errorw("error", "err", err, "log_time", time.Now().Format(itrlog.LogTimeFormat))
@@ -64,7 +66,7 @@ Or using the network directories, example:
 		// Give some info back to the user's console and the logs as well.
 		msg = `Successfully copied the entire directory or a folder: `
 		fmt.Println(msg, src, ", Number of Folders Copied: ", filesCopied, " Number of Files Copied: ", foldersCopied)
-		Sugar.Infow(msg, "src", src, "dst", dest, "folder_copied", filesCopied, "files_copied", foldersCopied, "log_time", time.Now().Format(itrlog.LogTimeFormat))
+		Sugar.Infow(msg, "src", src, "dst", dst, "folder_copied", filesCopied, "files_copied", foldersCopied, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 	},
 }
 

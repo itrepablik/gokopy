@@ -17,11 +17,12 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -46,7 +47,10 @@ Example of a valid directory path in Windows:
 
 Or using the network directories, example:
 
-"\\hostname_or_ip\source_folder_to_compress" "\\hostname_or_ip\backup_destination"`,
+"\\hostname_or_ip\source_folder_to_compress" "\\hostname_or_ip\backup_destination"
+
+Or in Linux:
+"/root/src" "/root/dst"`,
 	Args: cobra.MinimumNArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
 		NumFilesCopied = 0 // Reset this variable
@@ -73,7 +77,7 @@ Or using the network directories, example:
 		Sugar.Infow(msg, "src", src, "dst", dst, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 
 		// Starts copying the latest files from.
-		if err := kopy.WalkDIRModLatest(src, dst, mDays, IsLogCopiedFile); err != nil {
+		if err := kopy.WalkDIRModLatest(src, dst, mDays, IsLogCopiedFile, IgnoreFT, Sugar); err != nil {
 			fmt.Println(err)
 			Sugar.Errorw("error", "err", err, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 			return

@@ -17,10 +17,11 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"path/filepath"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 )
@@ -36,7 +37,10 @@ Example of a valid directory path in Windows:
 "C:\source_folder\filename.zip"
 
 Or using the network directories, example:
-"\\hostname_or_ip\source_folder\filename.zip"`,
+"\\hostname_or_ip\source_folder\filename.zip"
+
+Or in Linux:
+"/root/src/filename.zip"`,
 	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change
@@ -47,7 +51,7 @@ Or using the network directories, example:
 		fmt.Println(msg, src)
 		Sugar.Errorw(msg, "src", src, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 
-		if err := kopy.Unzip(src, IsLogCopiedFile); err != nil {
+		if err := kopy.Unzip(src, IsLogCopiedFile, Sugar); err != nil {
 			fmt.Println(err)
 			Sugar.Errorw("error", "err", err, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 			return

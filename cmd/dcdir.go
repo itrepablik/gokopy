@@ -17,11 +17,12 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 )
@@ -35,13 +36,16 @@ and its contents as well. Only the .tar.gz compress files will be extracted by t
 to the comdir command in which it will compress the entire folder.
 
 Example of a valid directory path in Windows:
-"C:\source_folder\foldername.tar.gz"
+"C:\source_folder\folder_name.tar.gz"
 
 Or using the network directories, example:
-"\\hostname_or_ip\source_folder\foldername.tar.gz"
+"\\hostname_or_ip\source_folder\folder_name.tar.gz"
 
 Example of a valid directory path in Linux:
-"/home/user/source_folder_to_compress/foldername.tar.gz".`,
+"/home/user/source_folder_to_compress/folder_name.tar.gz"
+
+Or in Linux:
+"/root/src/folder_name.tar.gz"`,
 	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change
@@ -58,7 +62,7 @@ Example of a valid directory path in Linux:
 			fmt.Println("error")
 			return
 		}
-		if err := kopy.ExtractTarGz(r, src, IsLogCopiedFile); err != nil {
+		if err := kopy.ExtractTarGz(r, src, IsLogCopiedFile, Sugar); err != nil {
 			fmt.Println(err)
 			Sugar.Errorw("error", "err", err, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 			return

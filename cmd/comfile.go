@@ -17,12 +17,13 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"os"
 	"path"
 	"path/filepath"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 )
@@ -37,7 +38,10 @@ Example of a valid directory path in Windows:
 "C:\source_folder\filename.txt" "D:\backup_destination"
 
 Or using the network directories, example:
-"\\hostname_or_ip\source_folder\filename.txt" "\\hostname_or_ip\backup_destination"`,
+"\\hostname_or_ip\source_folder\filename.txt" "\\hostname_or_ip\backup_destination"
+
+Or in Linux:
+"/root/src/file.txt" "/root/dst"`,
 	Args: cobra.MinimumNArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
 		// Use this function to auto detect file path structure.
@@ -61,7 +65,7 @@ Or using the network directories, example:
 		files := []string{src}
 
 		os.MkdirAll(dst, os.ModePerm) // Create the root folder first
-		if err := kopy.ComFiles(zipDest, files); err != nil {
+		if err := kopy.ComFiles(zipDest, files, Sugar); err != nil {
 			fmt.Println(err)
 			Sugar.Errorw("error", "err", err, "log_time", time.Now().Format(itrlog.LogTimeFormat))
 			return

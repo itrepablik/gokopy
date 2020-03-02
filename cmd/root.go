@@ -17,12 +17,12 @@ package cmd
 
 import (
 	"fmt"
-	"gokopy/itrlog"
 	"log"
 	"os"
-	"runtime"
 	"strconv"
 	"time"
+
+	"github.com/itrepablik/itrlog"
 
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
@@ -150,9 +150,6 @@ var MaxLogFileSizeInMB int = 100 // mb
 // MaxAgeLogInDays get the max age of a log files in days.
 var MaxAgeLogInDays int = 0 // 0 days means, it won't delete older backup logs
 
-// Logger type is the *zap.Logger initialization
-var Logger *zap.Logger
-
 // Sugar type is the *zap.SugaredLogger initialization
 var Sugar *zap.SugaredLogger
 
@@ -172,15 +169,6 @@ your most valuable files and be able to automate your backup schedules with ease
 In the case of a protected directory, Gokopy can't access it unless you map it with your network set of usernames
 and passwords. Gokopy will not keep any of your network credentials at all.
 
-Gokopy is a freemium software developed by ITRepablik, to get a free license for this software, get your free ITR
-account at https://itrepablik.com/signup and generate a free license for Gokopy by executing the command below.
-
-COMMAND to generate license key:
-gokopy get license
-
-Besides, to start the automated backup files scheduler, execute this command.
-gokopy run scheduler
-
 Ensure that the 'config.yaml' file has been properly configured for each of your automated backup items.
 This will save tons of your valuable time.`,
 	Version: "1.0.0",
@@ -199,17 +187,6 @@ func Execute() {
 }
 
 func init() {
-	// Get the user's primary hard disk serial number
-	// Identify the OS type
-	switch os := runtime.GOOS; os {
-	case "darwin":
-		log.Fatalf("oops! not supported operating system: %v", os)
-	case "linux":
-		log.Fatalf("oops! not supported operating system: %v", os)
-	default:
-		// freebsd, openbsd, plan9, windows...
-	}
-
 	cobra.OnInitialize(initConfig)
 	viper.SetConfigName("config") // name of config file (without extension)
 	viper.AddConfigPath(".")      // optionally look for config in the working directory
@@ -252,8 +229,7 @@ func init() {
 	}
 
 	// Zap / Lamberjack Logger initialization
-	Logger = itrlog.InitLog(MaxLogFileSizeInMB, MaxAgeLogInDays)
-	Sugar = Logger.Sugar()
+	Sugar = itrlog.InitLog(MaxLogFileSizeInMB, MaxAgeLogInDays, "logs", "gokopy_log_")
 
 	// Check if need to log each copied file.
 	isNeedToLogCopiedFile := viper.Get("logging.log_copied_file")

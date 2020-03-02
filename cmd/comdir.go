@@ -18,13 +18,14 @@ package cmd
 import (
 	"bytes"
 	"fmt"
-	"gokopy/itrlog"
-	"gokopy/kopy"
 	"io"
 	"os"
 	"path"
 	"path/filepath"
 	"time"
+
+	"github.com/itrepablik/itrlog"
+	"github.com/itrepablik/kopy"
 
 	"github.com/spf13/cobra"
 )
@@ -40,7 +41,10 @@ Example of a valid directory path in Windows:
 "C:\source_folder_to_compress" "D:\backup_destination"
 
 Or using the network directories, example:
-"\\hostname_or_ip\source_folder_to_compress" "\\hostname_or_ip\backup_destination"`,
+"\\hostname_or_ip\source_folder_to_compress" "\\hostname_or_ip\backup_destination"
+
+Or in Linux:
+"/root/src" "/root/dst"`,
 	Args: cobra.MinimumNArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
 		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change

@@ -1,27 +1,11 @@
 language: go
 
-os:
-  - linux
-  - osx
-  - windows
-
 go:
   - 1.13.x
-  - 1.12.x
   - tip
-
-# Only clone the most recent commit.
-git:
-  depth: 1
-
-env:
-  - GO111MODULE=on
 
 before_install:
   - go get github.com/spf13/cobra
   - go get github.com/spf13/viper
   - go get go.uber.org/zap
-  - go get github.com/mitchellh/go-homedir
-
-script:
-  - make test
+  - go get github.com/itrepablik/itrlog

@@ -19,3 +19,5 @@ This will save tons of your valuable time.
 This versions of open-source gokopy has a fully functional and basic backup files operation in Go, but, in our premium versions of gokopy, it has an automated backup files procedures that currently support the Windows OS in which it runs as a Windows Service that even when your local machine restarted unexpectedly, it will continue to back up your files as it runs automatically.
 
 You can get 1 premium license key for this full versions of gokopy, please get your free [ITR account](https://itrepalik.com/signup) here and to download the gokopy premium backup files software here.
+
+After you created your free ITR account, log in to your ITR's dashboard and download the gokopy, then, please read the gokopy's documentation on how you're going to [activate your license key](https://itrepablik.com/docs/gokopy/usage/get/).

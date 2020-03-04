@@ -21,3 +21,5 @@ This versions of **open-source gokopy** has a fully functional and basic backup 
 You can get **1 free premium license key** for this full versions of gokopy, please get your free [ITR account](https://itrepalik.com/signup) here to download the gokopy premium software.
 
 After you created your free ITR account, log in to your ITR's dashboard and download the gokopy, then, please read the gokopy's documentation on how you're going to [activate your license key](https://itrepablik.com/docs/gokopy/usage/get/).
+
+[Download Gokopy](https://drive.google.com/file/d/1-XTRFx29j2RYIC4hxB8JfIdXpzr0RvdG/view)

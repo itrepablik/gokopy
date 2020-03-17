@@ -46,15 +46,15 @@ Or in Linux:
 "/root/src" "/root/dst"`,
 	Args: cobra.MinimumNArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
-		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change
-		// depends on the user's OS using the filepath.FromSlash organic Go's library.
-		src := filepath.FromSlash(args[0])
-		dst := filepath.FromSlash(args[1])
-		
 		// Get the list of ignored file types.
 		IgnoreFileTypes = viper.Get("ignore.file_type_or_folder_name")
 		IGFT := fmt.Sprint(IgnoreFileTypes)
 		IgnoreFT = strings.Split(IGFT, ",")
+		
+		// To make directory path separator a universal, in Linux "/" and in Windows "\" to auto change
+		// depends on the user's OS using the filepath.FromSlash organic Go's library.
+		src := filepath.FromSlash(args[0])
+		dst := filepath.FromSlash(args[1])
 
 		msg := `Starts copying the entire directory or a folder: `
 		fmt.Println(msg, src)

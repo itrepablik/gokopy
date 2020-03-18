@@ -150,8 +150,8 @@ var MaxLogFileSizeInMB int = 100 // mb
 // MaxAgeLogInDays get the max age of a log files in days.
 var MaxAgeLogInDays int = 0 // 0 days means, it won't delete older backup logs
 
-// Sugar type is the *zap.SugaredLogger initialization
-var Sugar *zap.SugaredLogger
+// Sugar type is the *itrlog.ITRLogger initialization
+var Sugar *itrlog.ITRLogger
 
 var cfgFile string
 

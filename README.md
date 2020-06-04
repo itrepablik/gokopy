@@ -22,4 +22,4 @@ You can get **1 free premium license key** for this full versions of gokopy, ple
 
 After you created your free ITR account, log in to your ITR's dashboard and download the gokopy, then, please read the gokopy's documentation on how you're going to [activate your license key](https://itrepablik.com/docs/gokopy/usage/get/).
 
-[Download Gokopy](https://drive.google.com/file/d/1-XTRFx29j2RYIC4hxB8JfIdXpzr0RvdG/view)
+[Download Gokopy](https://drive.google.com/drive/folders/1A_KBtjyewtRintpxHmpWQWpsD7fpaCc8?usp=sharing)
